@@ -6,6 +6,7 @@
 package vista;
 
 import control.ControllerEstudiante;
+import control.ControllerTabla;
 import java.awt.Image;
 import java.util.HashMap;
 import javax.swing.ImageIcon;
@@ -189,7 +190,7 @@ public class interfaz extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     //
-    
+
     private void buscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarBtnActionPerformed
         // TODO add your handling code here:
         if (jRadioButton1.isSelected()) {
@@ -201,10 +202,10 @@ public class interfaz extends javax.swing.JFrame {
 //            }else{
 //                estado = true;
 //            }
+            ControllerTabla obt = new ControllerTabla();
             ControllerEstudiante obc = new ControllerEstudiante();
             HashMap<Estudiante, Imagen> le = obc.buscarECodigo(buscarpor);
-            
-            
+
             System.out.println("Datos: \n" + le.entrySet().iterator().next().getKey().getIdentificacione() + " "
                     + le.entrySet().iterator().next().getKey().getCodigoe() + " "
                     + le.entrySet().iterator().next().getKey().getNombre1e() + " "
