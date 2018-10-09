@@ -301,6 +301,7 @@ public class ModificarEstudiante extends javax.swing.JFrame {
         String direccione = jTextField5.getText();
         String correoe = jTextField6.getText();
         String jornada = jTextField7.getText();
+        
 //
         obje = new Estudiante(identificacione, codigoe, nombre1e, apellido1e, direccione, correoe, jornada, Rutaimage);
         boolean t = ControllerEstudiante.modificarEstudiante(obje);

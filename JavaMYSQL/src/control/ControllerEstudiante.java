@@ -18,7 +18,7 @@ public class ControllerEstudiante {
 
     public static boolean modificarEstudiante(Estudiante obje) {
         boolean t = false;
-        Estudiante ojb=new Estudiante();
+        Estudiante ojb = new Estudiante();
         String sql = "UPDATE estudiantes set identificacione=?, nombre1e=?, apellido1e=?, direccione=?, correoe=?, jornada=?, Fotoestudiante=? WHERE codigoe=?;";
         t = ojb.modificarEstudiante(sql, obje);
         return t;
@@ -61,12 +61,25 @@ public class ControllerEstudiante {
     }
 
     public HashMap<Estudiante, Imagen> buscarECodigo(String buscarpor) {
-        
-        String sql="Select * from estudiantes where codigoe='"+buscarpor+"';";
-        Estudiante e=new Estudiante();
-        
-        HashMap<Estudiante, Imagen> le=e.buscarEst(sql);
-        
+
+        String sql = "Select * from estudiantes where codigoe='" + buscarpor + "';";
+        Estudiante e = new Estudiante();
+
+        HashMap<Estudiante, Imagen> le = e.buscarEst(sql);
+
+        return le;
+    }
+
+    public HashMap<Estudiante, Imagen> buscarECodigo2(String buscarpor, boolean estado) {
+        String sql = "";
+        if (estado) {
+            sql = "Select * from estudiantes where codigoe='" + buscarpor + "';";
+        } else if (estado = false) {
+            sql = "Select * from estudiantes;";
+        }
+        Estudiante e = new Estudiante();
+        HashMap<Estudiante, Imagen> le = e.buscarEst(sql);
+
         return le;
     }
 }
