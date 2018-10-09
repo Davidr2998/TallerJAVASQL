@@ -70,16 +70,16 @@ public class ControllerEstudiante {
         return le;
     }
 
-    public HashMap<Estudiante, Imagen> buscarECodigo2(String buscarpor, boolean estado) {
-        String sql = "";
-        if (estado) {
-            sql = "Select * from estudiantes where codigoe='" + buscarpor + "';";
-        } else if (estado = false) {
-            sql = "Select * from estudiantes;";
-        }
-        Estudiante e = new Estudiante();
-        HashMap<Estudiante, Imagen> le = e.buscarEst(sql);
-
-        return le;
-    }
+//    public HashMap<Estudiante, Imagen> buscarECodigo2(String buscarpor, boolean estado) {
+//        String sql = "";
+//        if (estado) {
+//            sql = "Select * from estudiantes where codigoe='" + buscarpor + "';";
+//        } else if (estado = false) {
+//            sql = "Select * from estudiantes;";
+//        }
+//        Estudiante e = new Estudiante();
+//        HashMap<Estudiante, Imagen> le = e.buscarEst(sql);
+//
+//        return le;
+//    }
 }

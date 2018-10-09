@@ -4,11 +4,18 @@
  * and open the template in the editor.
  */
 package control;
+import modelo.Estudiante;
 
 /**
  *
  * @author User
  */
 public class ControllerTabla {
+
+    public ControllerTabla() {
+    }
+    
+    
+    
     
 }
